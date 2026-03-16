@@ -64,17 +64,67 @@ The coded experimental data were analyzed to develop a predictive regression mod
 
 Exploratory Data Analysis
 
-Exploratory data analysis was performed to visualize the relationships between the independent variables and the response variable.
+Exploratory data analysis was conducted to examine relationships between the fermentation parameters and butyrate yield. Descriptive statistics were generated to summarize the experimental dataset and assess the distribution of variables across the design space defined by the Central Composite Design.
 
-Model Evaluation
+Correlation analysis was performed to evaluate the strength and direction of relationships between the coded fermentation parameters and the response variable. Visualization techniques such as scatter plots and correlation heatmaps were used to identify potential trends and interactions among variables. These analyses provided preliminary insights into the factors influencing butyrate production and informed the subsequent regression modeling process.
 
-The predictive performance of the regression model was evaluated using appropriate statistical metrics, including the coefficient of determination and error analysis. These metrics were used to assess the model's ability to accurately predict butyrate yield based on the fermentation parameters.
+Response Surface Analysis
+
+Response Surface Methodology (RSM) was employed to investigate the interaction effects between fermentation variables and to determine the optimal parameter combinations for maximizing butyrate production. Contour plots were generated to visualize the interaction between pairs of variables while holding other variables constant.
+
+These plots illustrate the regions within the experimental design space that correspond to higher butyrate yields and provide a graphical representation of the optimization process.
 
 Computational Tools
 
 All data preprocessing, statistical analysis, and visualization were performed using Python-based data science tools and relevant libraries to support reproducible analysis and model development.
 
+# Results
+Regression Model
 
+A second-order polynomial regression model was developed to describe the relationship between fermentation parameters and butyrate yield. The model includes linear, quadratic, and interaction terms representing the coded variables used in the Central Composite Design.
+
+The regression equation obtained from the analysis is:
+
+Y = 8.683 + 0.2417A + 0.725B + 0.9833C + 0.525D − 0.95A² − 0.85B² − 0.88C² − 1.1D² + 0.63AB + 0.187AC − 0.038AD + 0.513BC − 0.113BD + 0.188CD
+
+Where:
+
+A = Temperature
+B = Glucose concentration
+C = Yeast extract concentration
+D = pH
+Y = Butyrate yield
+
+The regression model captures both individual factor effects and interactions between fermentation variables.
+
+Model Performance
+
+The predictive model demonstrated strong performance in describing the fermentation system. The coefficient of determination (R²) obtained for the model was 0.856, indicating that approximately 85.6% of the variability in butyrate yield can be explained by the model.
+
+Model accuracy was further evaluated using Root Mean Square Error (RMSE), which was calculated to be 0.308 g/L. These metrics suggest that the model provides reliable predictions within the experimental design space.
+
+Optimization of Fermentation Conditions
+
+Using the developed regression model, the optimal fermentation conditions for maximum butyrate production were predicted. The model estimated a maximum butyrate yield of 9.56 g/L under the following conditions:
+
+Temperature: 37.5 °C
+Glucose concentration: 57.4 g/L
+Yeast extract concentration: 14.5 g/L
+pH: 6.1
+
+These conditions represent the predicted optimum within the experimental design space explored in the study.
+
+Model Validation
+
+To verify the predictive capability of the regression model, additional fermentation experiments were conducted under selected conditions. The experimental results were compared with model predictions, and the low RMSE value indicates close agreement between predicted and observed yields. This validation confirms the reliability of the optimization model for predicting butyrate production.
+
+# Conclusion
+
+This study demonstrates the effectiveness of Central Composite Design and response surface methodology in optimizing microbial fermentation processes. The developed regression model successfully described the relationship between fermentation parameters and butyrate yield and identified optimal process conditions for enhanced production.
+
+The predicted maximum yield of 9.56 g/L represents a significant improvement compared to the initial yield obtained from the isolate, highlighting the value of statistical experimental design in bioprocess optimization.
+
+This project illustrates how data-driven approaches and statistical modeling can be applied to improve fermentation efficiency and support sustainable bio-based chemical production.
 
 
 

@@ -37,7 +37,7 @@ Dependent variable:
 • Matplotlib
 • Seaborn
 
-Methodology
+# Methodology
 
 Experimental Design
 
